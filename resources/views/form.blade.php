@@ -22,10 +22,12 @@
         @csrf
         <label for="">Username :@error('username')
                 {{ $message }}
-            @enderror <input type="text" name="username" id=""></label><br>
+            @enderror
+            <input type="text" name="username" id="" value="{{ old('username') }}"></label><br>
         <label for="">Password ::@error('password')
                 {{ $message }}
-            @enderror <input type="password" name="password" id=""></label><br>
+            @enderror
+            <input type="password" name="password" id="" value="{{ old('password') }}"></label><br>
         <input type="submit" value="Login">
     </form>
 </body>
